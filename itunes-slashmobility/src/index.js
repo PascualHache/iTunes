@@ -4,7 +4,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { Provider, connect } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import { reducer } from './reducers/reducer';
-import watchFetchSongs from './actions/sagas'
+import watchFetchSongs from './actions/sagas';
 import './index.css';
 import App from './App';
 

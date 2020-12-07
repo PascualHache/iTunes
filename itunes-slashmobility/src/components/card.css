@@ -1,0 +1,34 @@
+.cardRoot {
+    max-width: 345px;
+    height: 400px;
+}
+
+.cardMedia {
+    height: auto;
+    max-width: 300px;
+    padding-top: 56.25%;
+}
+
+.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding: 0px 10px 0px 10px;
+}
+
+.album {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding: 0px 10px 0px 10px;
+}
+
+.iconFav{
+    /* no funciona */
+    text-align: right;
+    align-items: right;
+}

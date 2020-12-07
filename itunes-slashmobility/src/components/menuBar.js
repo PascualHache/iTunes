@@ -5,11 +5,11 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
+// import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+// import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import {fetchSongs} from '../actions/action';
+import { fetchSongs } from '../actions/action';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -38,41 +38,7 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: theme.spacing(3),
             width: 'auto',
         },
-    },
-    searchIcon: {
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    inputRoot: {
-        color: 'inherit',
-    },
-    inputInput: {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-            width: '20ch',
-        },
-    },
-    sectionDesktop: {
-        display: 'none',
-        [theme.breakpoints.up('md')]: {
-            display: 'flex',
-        },
-    },
-    sectionMobile: {
-        display: 'flex',
-        [theme.breakpoints.up('md')]: {
-            display: 'none',
-        },
-    },
+    }
 }));
 
 export default function IonSearchbar(props) {
@@ -81,17 +47,7 @@ export default function IonSearchbar(props) {
     const handleChange = event => {
         setSearchTerm(event.target.value);
     };
-
     const classes = useStyles();
-    const menuId = 'primary-search-account-menu';
-    const renderMenu = (
-        <Menu
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-            id={menuId}
-            keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        />
-    );
 
     return (
         <div className={classes.grow}>
@@ -106,39 +62,29 @@ export default function IonSearchbar(props) {
                         <MenuIcon />
                     </IconButton>
                     <div className={classes.search}>
-                        <div className={classes.searchIcon}>
-                            <SearchIcon />
-                        </div>
-                        {/* <InputBase
-                            placeholder="Search…"
-                            classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput,
-                            }}
-                            inputProps={{ 'aria-label': 'search' }}
-                        /> */}
                         <input
                             type="text"
                             placeholder="Search"
                             value={searchTerm}
                             onChange={handleChange}
                         />
-                    <button onClick={() => props.params.dispatch(fetchSongs(searchTerm))}>Show SONGS</button> 
+                        <button 
+                        onClick={() => props.params.dispatch(fetchSongs(searchTerm))}>Show SONGS</button>
                     </div>
                     <div className={classes.grow} />
 
                     {/* Favoritos */}
                     <MenuItem>
-                        <IconButton aria-label="show 11 new notifications" color="inherit">
-                            <Badge badgeContent={11} color="secondary">
+                        <IconButton aria-label="" color="inherit">
+                            <Badge badgeContent={localStorage.length} color="secondary">
                                 <FavoriteIcon />
                             </Badge>
                         </IconButton>
-                        
+
                     </MenuItem>
                 </Toolbar>
             </AppBar>
-            {renderMenu}
+            {/* {renderMenu} */}
         </div>
     );
 }

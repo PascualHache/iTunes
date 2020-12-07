@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { takeEvery, call, put, take } from 'redux-saga/effects';
+import { takeEvery, call, put } from 'redux-saga/effects';
 import { requestSongs, requestSongsSuccess, requestSongsError } from './action';
 
 export default function* watchFetchSongs() {

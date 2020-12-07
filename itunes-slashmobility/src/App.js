@@ -2,14 +2,13 @@ import React from 'react';
 import './App.css';
 // import { fetchSongs } from './actions/action';
 import SongCard from './components/card';
-import MenuBar from './components/menuBar2';
+import IonSearchbar from './components/menuBar';
 
 export default class App extends React.Component {
   render() {
 
     return (<div>
-      <MenuBar params={this.props} />
-      {/* <button onClick={() => this.props.dispatch(fetchSongs("Methodman"))}>Show SONGS</button> */}
+      <IonSearchbar params={this.props} />
       <div className="generalGrid">
         {this.props.loading
           ? <p>Loading...</p>

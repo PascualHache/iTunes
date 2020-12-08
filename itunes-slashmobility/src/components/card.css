@@ -1,12 +1,16 @@
 .cardRoot {
-    max-width: 345px;
-    height: 400px;
+    width: 320px;
+    height: auto;
+    margin: 10px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 .cardMedia {
-    height: auto;
-    max-width: 300px;
-    padding-top: 56.25%;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
 }
 
 .title {
@@ -15,7 +19,15 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 5px 0px 20px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: rgb(78, 76, 76);
+    height: 70px;
+}
+
+.title:hover{
+    overflow: visible;
 }
 
 .album {
@@ -24,11 +36,25 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 20px 0px 20px;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgb(82, 76, 76);
 }
 
-.iconFav{
-    /* no funciona */
+.iconBox {
+    width: 90%;
+    margin-top: 50px;
+    padding: 10px;
     text-align: right;
-    align-items: right;
+}
+
+.iconFav {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.iconFavIn {
+    padding-top: 7px;
 }

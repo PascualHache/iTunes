@@ -16,7 +16,6 @@ const store = createStore(
 sagaMiddleware.run(watchFetchSongs);
 
 const ConnectedApp = connect((state) => {
-  console.log(state);
   return state;
 })(App);
 

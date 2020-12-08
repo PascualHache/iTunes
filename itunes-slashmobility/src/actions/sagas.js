@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { takeEvery, call, put, take } from 'redux-saga/effects';
+import { takeEvery, call, put } from 'redux-saga/effects';
 import { requestSongs, requestSongsSuccess, requestSongsError } from './action';
 
 export default function* watchFetchSongs() {
@@ -9,7 +9,6 @@ export default function* watchFetchSongs() {
 export function* fetchSongsAsync({name}) {
     try {
         yield put(requestSongs());
-        // console.log('Parametro de la busqueda',name)
         const data = yield call(() => axios.get(`https://itunes.apple.com/search?&entity=song&term=${name}`
         ).then(response => response.data)
             .catch(err => {

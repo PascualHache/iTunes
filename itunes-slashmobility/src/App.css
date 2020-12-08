@@ -1,22 +1,6 @@
-.generalGrid {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+h2, h3, p{
+  font-family: 'Roboto', sans-serif;
 }
-
-.cardGrid {
-  flex-grow: 3;
-}
-
-
-.cardGrid div{
-  width: 400px;
-  height: auto;
-  margin: 20px;
-}
-
-.cardMedia{
-  width: 100px;
+.allPage{
+  background-color: RGB(241,241,241);
 }

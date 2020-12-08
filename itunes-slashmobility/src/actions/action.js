@@ -3,7 +3,7 @@ export const requestSongs = () => {
 };
 
 export const requestSongsSuccess = (data) => {
-    return { type: 'REQUESTED_SONGS_SUCCEEDED', url: data.results }
+    return { type: 'REQUESTED_SONGS_SUCCEEDED', response: data.results }
 };
 
 export const requestSongsError = () => {

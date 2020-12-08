@@ -1,12 +1,22 @@
 import React from 'react';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { mdiHeart } from '@mdi/js';
+import { mdiHeartOutline } from '@mdi/js';
+import Icon from '@mdi/react';
 
 export default function FavoriteComponent(bFav) {
     return (
-        <div className="">
-            {console.log("Abduscan", bFav)}
-            {bFav.input === false ? <FavoriteBorderIcon /> : <FavoriteIcon />}
+        <div className="iconFavIn">
+            {bFav.input === false ?
+                <Icon
+                    path={mdiHeartOutline}
+                    size={1}
+                    color={"#76B3C8"}
+                     />
+                : <Icon
+                    path={mdiHeart}
+                    size={1}
+                    color={"#76B3C8"}
+                     />}
         </div>
     )
 }

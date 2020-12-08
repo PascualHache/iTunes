@@ -1,0 +1,127 @@
+.MuiAppBar-colorPrimary {
+    background-color: RGB(118, 179, 200) !important;
+    height: 4rem;
+}
+
+.menuLogo {
+    width: 1.5em;
+    margin-right: 3rem;
+}
+
+
+.MuiIconButton-root, .MuiIconButton-root:hover {
+    color: RGB(0, 0, 0) !important;
+    border-radius: 99% !important;
+    padding: 2px !important;
+}
+
+.favoriteBar {
+    width: 1.3em !important;
+    padding-top: 12px;
+}
+
+.MuiBadge-colorSecondary {
+    background-color: #c4bdbd !important;
+}
+
+.MuiBadge-anchorOriginTopRightRectangle {
+    top: 12px !important;
+}
+
+/* INPUT FIELD*/
+.wrapper {
+    position: relative;
+    display: flex;
+    min-width: 100px;
+    width: 300px;
+    height: 35px;
+    /* margin-left: 3rem; */
+}
+
+.search-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    filter: invert(99%) sepia(6%) saturate(313%) hue-rotate(264deg) brightness(115%) contrast(97%);
+}
+
+.clear-icon {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 20px;
+    cursor: pointer;
+    filter: invert(99%) sepia(6%) saturate(313%) hue-rotate(264deg) brightness(115%) contrast(97%);
+    visibility: hidden;
+}
+
+.searchIn {
+    border: 1px solid #52a3be;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    padding: 2px 23px 2px 38px;
+    /* margin-left: 3rem; */
+    outline: 0;
+    background-color: #52a3be;
+    color: #FBFBFB;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FBFBFB;
+    opacity: 1;
+    /* Firefox */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #FBFBFB;
+    ;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #FBFBFB;
+    ;
+}
+
+.search:hover,
+.search:focus {
+    border: 1.5px solid #52a3be;
+    background-color: #52a3be;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .makeStyles-search-4,
+    .wrapper {
+        min-width: 50px;
+        width: 180px !important;
+        height: 35px;
+        margin: 0 auto;
+        /* margin-left: 3rem; */
+    }
+
+    .menuLogo {
+        margin-right: 0.5rem;
+    }
+}
+
+
+@media screen and (max-width: 342px) {
+    .menuLogo {
+        margin-right: 0.1rem;
+    }
+
+    .makeStyles-menuButton-2 {
+        margin-right: 0rem !important;
+    }
+
+}

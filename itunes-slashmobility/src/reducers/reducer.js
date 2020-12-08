@@ -14,7 +14,7 @@ export const reducer = (state = initialState, action) => {
             };
         case 'REQUESTED_SONGS_SUCCEEDED':
             return {
-                results: action.url,
+                results: action.response,
                 loading: false,
                 error: false,
             };

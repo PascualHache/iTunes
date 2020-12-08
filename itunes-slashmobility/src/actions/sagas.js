@@ -9,7 +9,6 @@ export default function* watchFetchSongs() {
 export function* fetchSongsAsync({name}) {
     try {
         yield put(requestSongs());
-        // console.log('Parametro de la busqueda',name)
         const data = yield call(() => axios.get(`https://itunes.apple.com/search?&entity=song&term=${name}`
         ).then(response => response.data)
             .catch(err => {
